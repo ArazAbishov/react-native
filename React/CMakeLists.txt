@@ -71,7 +71,6 @@ set(REACT_SRC_HEADERS
   Modules/RCTExceptionsManager.h
   Modules/RCTI18nManager.h
   Modules/RCTI18nUtil.h
-  Modules/RCTJSCSamplingProfiler.h
   Modules/RCTKeyboardObserver.h
   Modules/RCTLayoutAnimation.h
   Modules/RCTLayoutAnimationGroup.h
@@ -85,7 +84,6 @@ set(REACT_SRC_HEADERS
   Profiler/RCTFPSGraph.h
   Profiler/RCTMacros.h
   Profiler/RCTProfile.h
-  ../ReactCommon/jschelpers/JSCJSException.h
   Views/RCTActivityIndicatorView.h
   Views/RCTActivityIndicatorViewManager.h
   Views/RCTAnimationType.h
@@ -100,10 +98,6 @@ set(REACT_SRC_HEADERS
   Views/RCTModalHostView.h
   Views/RCTModalHostViewController.h
   Views/RCTModalHostViewManager.h
-  Views/RCTNavigator.h
-  Views/RCTNavigatorManager.h
-  Views/RCTNavItem.h
-  Views/RCTNavItemManager.h
   Views/RCTPicker.h
   Views/RCTPickerManager.h
   Views/RCTPointerEvents.h
