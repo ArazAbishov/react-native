@@ -64,7 +64,7 @@ type DirectEventProps = $ReadOnly<{|
    */
   onKeyDown?: ?(event: SyntheticEvent<{key: string}>) => mixed, // TODO(macOS ISS#2323203)
 
-  onMouseEnter?: (event: SyntheticEvent<{}>) => mixed, // [TODO(macOS ISS#2323203)
+  onMouseEnter?: (event: SyntheticEvent<{}>) => mixed, // TODO(macOS ISS#2323203)
 
   /**
    * Invoked on mount and layout changes with:

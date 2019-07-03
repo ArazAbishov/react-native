@@ -323,10 +323,10 @@ const TouchableWithoutFeedback = ((createReactClass({
         this.props.clickable !== false && this.props.onPress !== undefined, // TODO(android ISS)
       onClick: this.touchableHandlePress, // TODO(android ISS)
       onMouseEnter: this.props.onMouseEnter, // [TODO(macOS ISS#2323203)
-      onMouseLeave: this.props.onMouseLeave, // [TODO(macOS ISS#2323203)
-      onDragEnter: this.props.onDragEnter, // [TODO(macOS ISS#2323203)
-      onDragLeave: this.props.onDragLeave, // [TODO(macOS ISS#2323203)
-      onDrop: this.props.onDrop, // [TODO(macOS ISS#2323203)
+      onMouseLeave: this.props.onMouseLeave,
+      onDragEnter: this.props.onDragEnter,
+      onDragLeave: this.props.onDragLeave,
+      onDrop: this.props.onDrop,
       draggedTypes: this.props.draggedTypes, // ]TODO(macOS ISS#2323203)
       children,
     });

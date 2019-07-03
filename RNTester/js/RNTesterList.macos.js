@@ -171,11 +171,6 @@ const APIExamples: Array<RNTesterExample> = [
     supportsTVOS: false,
   },
   {
-    key: 'AlertExample',
-    module: require('./AlertExample').AlertExample,
-    supportsTVOS: false,
-  },
-  {
     key: 'AlertMacOSExample',
     module: require('./AlertMacOSExample'),
     supportsTVOS: false,

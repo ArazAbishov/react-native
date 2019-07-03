@@ -222,8 +222,8 @@ class WebSocket extends EventTarget(...WEBSOCKET_EVENTS) {
   _close(code?: number, reason?: string): void {
     if (
       Platform.OS === 'android' ||
-      Platform.OS === 'win32' ||
-      Platform.OS === 'windesktop'
+      Platform.OS === 'win32' /*TODO(windows ISS)*/ ||
+      Platform.OS === 'windesktop' /*TODO(windows ISS)*/
     ) {
       // See https://developer.mozilla.org/en-US/docs/Web/API/CloseEvent
       const statusCode = typeof code === 'number' ? code : CLOSE_NORMAL;

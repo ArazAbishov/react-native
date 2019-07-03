@@ -12,8 +12,6 @@
 
 @protocol RCTValueAnimatedNodeObserver;
 
-@protocol RCTValueAnimatedNodeObserver;
-
 @interface RCTNativeAnimatedNodesManager : NSObject
 
 - (nonnull instancetype)initWithUIManager:(nonnull RCTUIManager *)uiManager;

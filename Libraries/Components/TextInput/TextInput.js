@@ -990,11 +990,11 @@ const TextInput = createReactClass({
     );
   },
 
+  // [TODO(OSS Candidate ISS#2710739)
   /**
    * Returns the native `TextView` node.
    */
   getTextViewHandle: function(): any {
-    // [TODO(OSS Candidate ISS#2710739)
     return ReactNative.findNodeHandle(this._inputRef);
   }, // ]TODO(OSS Candidate ISS#2710739)
 
@@ -1277,8 +1277,8 @@ const TextInput = createReactClass({
     );
   },
 
+  // [TODO(windows ISS)
   _renderWindows: function() {
-    // [TODO(windows ISS)
     var props = Object.assign({}, this.props);
     props.style = [(styles: any).input, this.props.style];
 

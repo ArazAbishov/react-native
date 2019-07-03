@@ -14,7 +14,7 @@ const Platform = require('Platform');
 const React = require('React');
 const StyleSheet = require('StyleSheet');
 const Text = require('Text');
-const TouchableHighlight = require('TouchableHighlight'); // [TODO(windows ISS)
+const TouchableHighlight = require('TouchableHighlight'); // TODO(windows ISS)
 const TouchableNativeFeedback = require('TouchableNativeFeedback');
 const TouchableOpacity = require('TouchableOpacity');
 const View = require('View');
@@ -162,7 +162,7 @@ const styles = StyleSheet.create({
       backgroundColor: '#2196F3',
       borderRadius: 2,
     },
-    macos: {}, // TODO(macOS ISS#2323203)
+    macos: {}, // [TODO(macOS ISS#2323203)
     uwp: {
       // [TODO(windows ISS)
       backgroundColor: '#2196F3',
@@ -202,7 +202,7 @@ const styles = StyleSheet.create({
       elevation: 0,
       backgroundColor: '#dfdfdf',
     },
-    macos: {}, // TODO(macOS ISS#2323203)
+    macos: {}, // [TODO(macOS ISS#2323203)
     uwp: {
       // [TODO(windows ISS)
       backgroundColor: '#dfdfdf',

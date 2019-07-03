@@ -104,8 +104,10 @@ RCT_EXPORT_VIEW_PROPERTY(minimumTrackTintColor, UIColor);
 RCT_EXPORT_VIEW_PROPERTY(maximumTrackTintColor, UIColor);
 RCT_EXPORT_VIEW_PROPERTY(onValueChange, RCTBubblingEventBlock);
 RCT_EXPORT_VIEW_PROPERTY(onSlidingComplete, RCTBubblingEventBlock);
+#if !TARGET_OS_OSX // TODO(macOS ISS#2323203)
 RCT_EXPORT_VIEW_PROPERTY(thumbTintColor, UIColor);
 RCT_EXPORT_VIEW_PROPERTY(thumbImage, UIImage);
+#endif // TODO(macOS ISS#2323203)
 RCT_CUSTOM_VIEW_PROPERTY(disabled, BOOL, RCTSlider)
 {
   if (json) {

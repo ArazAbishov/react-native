@@ -50,8 +50,8 @@ class LayoutEventsTest extends React.Component<Props, State> {
   animateViewLayout() {
     debug('animateViewLayout invoked');
     LayoutAnimation.configureNext(
-      Platform.OS === 'macos'
-        ? LayoutAnimation.Presets.easeInEaseOut
+      Platform.OS === 'macos' // [TODO(macOS ISS#2323203)
+        ? LayoutAnimation.Presets.easeInEaseOut // ]TODO(macOS ISS#2323203)
         : LayoutAnimation.Presets.spring,
       () => {
         debug('animateViewLayout done');

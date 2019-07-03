@@ -282,7 +282,7 @@ const TouchableOpacity = ((createReactClass({
       <Animated.View
         accessible={this.props.accessible !== false}
         accessibilityLabel={this.props.accessibilityLabel}
-        accessibilityHint={this.props.accessibilityHint} // TODO(OSS Candidate ISS#2710739)
+        accessibilityHint={this.props.accessibilityHint}
         accessibilityRole={this.props.accessibilityRole}
         accessibilityStates={this.props.accessibilityStates}
         onAccessibilityTap={this.props.onAccessibilityTap} // TODO(OSS Candidate ISS#2710739)
@@ -341,11 +341,7 @@ const TouchableOpacity = ((createReactClass({
         onDragEnter={this.props.onDragEnter}
         onDragLeave={this.props.onDragLeave}
         onDrop={this.props.onDrop}
-        draggedTypes={this.props.draggedTypes} // ]TODO(macOS ISS#2323203)
-        /* $FlowFixMe(>=0.89.0 site=react_native_fb) This comment suppresses an
-         * error found when Flow v0.89 was deployed. To see the error, delete
-         * this comment and run Flow. */
-        onResponderTerminate={this.touchableHandleResponderTerminate}>
+        draggedTypes={this.props.draggedTypes /*]TODO(macOS ISS#2323203)*/}>
         {this.props.children}
         {Touchable.renderDebugView({
           color: 'cyan',
