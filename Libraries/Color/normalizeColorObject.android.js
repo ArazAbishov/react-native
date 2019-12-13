@@ -10,11 +10,9 @@
 // [TODO(macOS ISS#2323203)
 'use strict';
 
-import type {NativeOrDynamicColorType} from 'NativeOrDynamicColorType';
+import type {NativeColorValue, ProcessedColorValue} from 'ColorValueTypes';
 
-function normalizeColorObject(
-  color: NativeOrDynamicColorType,
-): ?(number | NativeOrDynamicColorType) {
+function normalizeColorObject(color: NativeColorValue): ?ProcessedColorValue {
   return null;
 }
 

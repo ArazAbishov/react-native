@@ -11,15 +11,11 @@
 /* eslint no-bitwise: 0 */
 'use strict';
 
-import type {NativeOrDynamicColorType} from './NativeOrDynamicColorType'; // TODO(macOS ISS#2323203)
+import type {ColorValue, ProcessedColorValue} from './ColorValueTypes'; // TODO(macOS ISS#2323203)
 
 function normalizeColor(
-  color: ?(
-    | string
-    | number
-    | NativeOrDynamicColorType
-  ) /* TODO(macOS ISS#2323203) */,
-): ?(number | NativeOrDynamicColorType) /* TODO(macOS ISS#2323203) */ {
+  color: ?(ColorValue | ProcessedColorValue) /* TODO(macOS ISS#2323203) */,
+): ?ProcessedColorValue /* TODO(macOS ISS#2323203) */ {
   const matchers = getMatchers();
   let match;
 

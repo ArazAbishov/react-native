@@ -10,11 +10,9 @@
 // [TODO(macOS ISS#2323203)
 'use strict';
 
-import type {NativeOrDynamicColorType} from 'NativeOrDynamicColorType';
+import type {NativeColorValue, ProcessedColorValue} from 'ColorValueTypes';
 
-function normalizeColorObject(
-  color: NativeOrDynamicColorType,
-): ?(number | NativeOrDynamicColorType) {
+function normalizeColorObject(color: NativeColorValue): ?ProcessedColorValue {
   if ('semantic' in color) {
     // a macos semantic color
     return color;
@@ -23,7 +21,7 @@ function normalizeColorObject(
 
     // a dynamic, appearance aware color
     const dynamic = color.dynamic;
-    const dynamicColor: NativeOrDynamicColorType = {
+    const dynamicColor: NativeColorValue = {
       dynamic: {
         light: normalizeColor(dynamic.light),
         dark: normalizeColor(dynamic.dark),

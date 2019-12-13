@@ -22,7 +22,7 @@ const RCTPickerNativeComponent = require('./RCTPickerNativeComponent');
 
 import type {SyntheticEvent} from '../../Types/CoreEventTypes';
 import type {ColorValue} from '../../StyleSheet/StyleSheetTypes';
-import type {ProcessedColorValue} from '../../Color/ColorValueType';
+import type {ProcessedColorValue} from '../../Color/ColorValueTypes';
 import type {ViewProps} from '../View/ViewPropTypes';
 import type {TextStyleProp} from '../../StyleSheet/StyleSheet';
 

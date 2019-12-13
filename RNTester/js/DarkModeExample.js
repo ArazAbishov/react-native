@@ -186,7 +186,9 @@ class DynamicColorsExample extends React.Component<{}, State> {
             style={{
               flex: 0.25,
               alignItems: 'stretch',
-              backgroundColor: PlatformColor('', {light: 'red', dark: 'blue'}),
+              backgroundColor: PlatformColor('', {
+                dynamic: {light: 'red', dark: 'blue'},
+              }),
             }}
           />
         </View>

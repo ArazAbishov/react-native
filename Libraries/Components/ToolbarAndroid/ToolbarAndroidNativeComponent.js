@@ -16,7 +16,7 @@ import type {SyntheticEvent} from '../../Types/CoreEventTypes';
 import type {ImageSource} from '../../Image/ImageSource';
 import type {ViewProps} from '../View/ViewPropTypes';
 import type {NativeComponent} from '../../Renderer/shims/ReactNative';
-import type {ColorValue} from '../../Color/ColorValueType'; // ]TODO(macOS ISS#2323203)
+import type {ColorValue} from '../../Color/ColorValueTypes'; // ]TODO(macOS ISS#2323203)
 
 type Action = $ReadOnly<{|
   title: string,

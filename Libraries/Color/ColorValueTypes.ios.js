@@ -5,24 +5,31 @@
  * LICENSE file in the root directory of this source tree.
  *
  * @format
- * @flow strict-local
+ * @flow strict
  */
 
 // TODO(macOS ISS#2323203)
 
 'use strict';
 
-import type {NativeOrDynamicColorType} from 'NativeOrDynamicColorType';
+export type ColorValue = null | string | NativeColorValue;
 
-export type ColorValue = null | string | NativeOrDynamicColorType;
-export type ProcessedColorValue = number | NativeOrDynamicColorType;
+export type NativeColorValue = {
+  semantic?: string,
+  dynamic?: {
+    light: ?(ColorValue | ProcessedColorValue),
+    dark: ?(ColorValue | ProcessedColorValue),
+  },
+};
+
+export type ProcessedColorValue = number | NativeColorValue;
 
 export const PlatformColor = (
   name: string,
   options?: Object /* flowlint-line unclear-type: off */,
 ): ColorValue => {
   if (options) {
-    return {dynamic: options};
+    return options;
   }
   return {semantic: name};
 };

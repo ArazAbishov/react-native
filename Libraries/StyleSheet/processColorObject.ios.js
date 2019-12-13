@@ -10,15 +10,13 @@
 // [TODO(macOS ISS#2323203)
 'use strict';
 
-import type {NativeOrDynamicColorType} from 'NativeOrDynamicColorType';
+import type {NativeColorValue} from 'ColorValueTypes';
 
-function processColorObject(
-  color: NativeOrDynamicColorType,
-): ?NativeOrDynamicColorType {
+function processColorObject(color: NativeColorValue): ?NativeColorValue {
   if ('dynamic' in color && color.dynamic !== undefined) {
     const processColor = require('processColor');
     const dynamic = color.dynamic;
-    const dynamicColor: NativeOrDynamicColorType = {
+    const dynamicColor: NativeColorValue = {
       dynamic: {
         light: processColor(dynamic.light),
         dark: processColor(dynamic.dark),
