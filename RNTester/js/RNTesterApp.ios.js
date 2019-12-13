@@ -166,7 +166,7 @@ const styles = StyleSheet.create({
     fontSize: 19,
     fontWeight: '600',
     textAlign: 'center',
-    color: {dynamic: {light: 'black', dark: 'white'}}, // TODO(OSS Candidate ISS#2710739)
+    color: PlatformColor('labelColor'), // TODO(OSS Candidate ISS#2710739)
   },
   exampleContainer: {
     flex: 1,

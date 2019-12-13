@@ -114,7 +114,7 @@ exports.examples = [
           <ActivityIndicator
             color={
               Platform.OS === 'macos'
-                ? {dynamic: {light: 'black', dark: 'white'}}
+                ? PlatformColor('', {light: 'black', dark: 'white'})
                 : '#0000ff'
             }
           />
