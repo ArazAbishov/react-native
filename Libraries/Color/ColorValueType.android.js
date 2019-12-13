@@ -15,9 +15,7 @@
 export type ColorValue = null | string;
 export type ProcessedColorValue = number;
 
-const PlatformColor = (
+export const PlatformColor = (
   name: string,
   options?: Object /* flowlint-line unclear-type: off */,
 ): ColorValue => null;
-
-module.exports = PlatformColor;

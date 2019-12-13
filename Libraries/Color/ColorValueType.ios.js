@@ -17,11 +17,12 @@ import type {NativeOrDynamicColorType} from 'NativeOrDynamicColorType';
 export type ColorValue = null | string | NativeOrDynamicColorType;
 export type ProcessedColorValue = number | NativeOrDynamicColorType;
 
-const PlatformColor = (
+export const PlatformColor = (
   name: string,
   options?: Object /* flowlint-line unclear-type: off */,
 ): ColorValue => {
-  return {semanic: name};
+  if (options) {
+    return {dynamic: options};
+  }
+  return {semantic: name};
 };
-
-module.exports = PlatformColor;

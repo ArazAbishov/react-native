@@ -168,6 +168,33 @@ class SemanticColorsExample extends React.Component<{}, State> {
   }
 }
 
+class DynamicColorsExample extends React.Component<{}, State> {
+  state: State = {};
+  render() {
+    return (
+      <View style={{flex: 1, flexDirection: 'column'}}>
+        <View style={{flex: 0.75, flexDirection: 'row'}}>
+          <Text
+            style={{
+              flex: 1,
+              alignItems: 'stretch',
+              color: PlatformColor('labelColor'),
+            }}>
+            Red or Blue depending on Light or Dark theme
+          </Text>
+          <View
+            style={{
+              flex: 0.25,
+              alignItems: 'stretch',
+              backgroundColor: PlatformColor('', {light: 'red', dark: 'blue'}),
+            }}
+          />
+        </View>
+      </View>
+    );
+  }
+}
+
 exports.title = 'Dark Mode';
 exports.description =
   'Examples that show how Dark Mode may be implemented in an app.';
@@ -176,6 +203,12 @@ exports.examples = [
     title: 'Semantic Colors',
     render: function(): React.Element<any> {
       return <SemanticColorsExample />;
+    },
+  },
+  {
+    title: 'Dynamic Colors',
+    render: function(): React.Element<any> {
+      return <DynamicColorsExample />;
     },
   },
 ];
