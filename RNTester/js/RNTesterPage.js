@@ -12,7 +12,7 @@
 
 const React = require('react');
 import Platform from '../../Libraries/Utilities/Platform'; // TODO(OSS Candidate ISS#2710739)
-const {ScrollView, StyleSheet, View} = require('react-native');
+const {PlatformColor, ScrollView, StyleSheet, View} = require('react-native'); // TODO(macOS ISS#2323203)
 
 const RNTesterTitle = require('./RNTesterTitle');
 
@@ -55,10 +55,10 @@ const styles = StyleSheet.create({
   container: {
     ...Platform.select({
       ios: {
-        backgroundColor: {semantic: 'secondarySystemBackgroundColor'},
+        backgroundColor: PlatformColor('secondarySystemBackgroundColor'),
       },
       macos: {
-        backgroundColor: {semantic: 'underPageBackgroundColor'},
+        backgroundColor: PlatformColor('underPageBackgroundColor'),
       },
       default: {
         backgroundColor: '#e9eaed',

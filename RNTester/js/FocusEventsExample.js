@@ -13,7 +13,7 @@
 var React = require('react');
 var ReactNative = require('react-native');
 import Platform from '../../Libraries/Utilities/Platform';
-var {StyleSheet, Text, View, TextInput} = ReactNative;
+var {PlatformColor, StyleSheet, Text, View, TextInput} = ReactNative;
 
 type State = {
   eventStream: string,
@@ -46,7 +46,7 @@ class FocusEventExample extends React.Component<{}, State> {
             }}
             placeholder={'TextInput'}
             placeholderTextColor={
-              Platform.OS === 'macos' ? {semantic: 'textColor'} : 'black'
+              Platform.OS === 'macos' ? PlatformColor('textColor') : 'black'
             }
             style={styles.textInput}
           />
@@ -103,7 +103,7 @@ class FocusEventExample extends React.Component<{}, State> {
               style={styles.textInput}
               placeholder={'Nested Singleline TextInput'}
               placeholderTextColor={
-                Platform.OS === 'macos' ? {semantic: 'textColor'} : 'black'
+                Platform.OS === 'macos' ? PlatformColor('textColor') : 'black'
               }
             />
           </View>
@@ -174,7 +174,7 @@ class FocusEventExample extends React.Component<{}, State> {
               multiline={true}
               placeholder={'Nested Multiline TextInput'}
               placeholderTextColor={
-                Platform.OS === 'macos' ? {semantic: 'textColor'} : 'black'
+                Platform.OS === 'macos' ? PlatformColor('textColor') : 'black'
               }
             />
           </View>
@@ -190,9 +190,9 @@ var styles = StyleSheet.create({
   textInput: {
     ...Platform.select({
       macos: {
-        color: {semantic: 'textColor'},
-        backgroundColor: {semantic: 'textBackgroundColor'},
-        borderColor: {semantic: 'gridColor'},
+        color: PlatformColor('textColor'),
+        backgroundColor: PlatformColor('textBackgroundColor'),
+        borderColor: PlatformColor('gridColor'),
       },
       default: {
         borderColor: '#0f0f0f',

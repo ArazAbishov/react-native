@@ -19,6 +19,7 @@ const {
   // BackHandler,
   Button,
   Linking,
+  PlatformColor, // TODO(macOS ISS#2323203)
   // SafeAreaView,
   StyleSheet,
   Text,
@@ -148,8 +149,8 @@ class RNTesterApp extends React.Component<Props, RNTesterNavigationState> {
 const styles = StyleSheet.create({
   headerContainer: {
     borderBottomWidth: StyleSheet.hairlineWidth,
-    borderBottomColor: {semantic: 'separatorColor'}, // TODO(OSS Candidate ISS#2710739)
-    backgroundColor: {semantic: 'windowBackgroundColor'}, // TODO(OSS Candidate ISS#2710739)
+    borderBottomColor: PlatformColor('separatorColor'), // TODO(OSS Candidate ISS#2710739)
+    backgroundColor: PlatformColor('windowBackgroundColor'), // TODO(OSS Candidate ISS#2710739)
   },
   header: {
     height: 40,

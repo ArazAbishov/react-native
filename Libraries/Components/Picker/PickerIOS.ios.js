@@ -22,9 +22,9 @@ const RCTPickerNativeComponent = require('./RCTPickerNativeComponent');
 
 import type {SyntheticEvent} from '../../Types/CoreEventTypes';
 import type {ColorValue} from '../../StyleSheet/StyleSheetTypes';
+import type {ProcessedColorValue} from '../../Color/ColorValueType';
 import type {ViewProps} from '../View/ViewPropTypes';
 import type {TextStyleProp} from '../../StyleSheet/StyleSheet';
-import type {NativeOrDynamicColorType} from '../../Color/NativeOrDynamicColorType'; // ]TODO(macOS ISS#2323203)
 
 type PickerIOSChangeEvent = SyntheticEvent<
   $ReadOnly<{|
@@ -36,7 +36,7 @@ type PickerIOSChangeEvent = SyntheticEvent<
 type RCTPickerIOSItemType = $ReadOnly<{|
   label: ?Label,
   value: ?(number | string),
-  textColor: ?(number | NativeOrDynamicColorType), // TODO(macOS ISS#2323203)
+  textColor: ?ProcessedColorValue, // TODO(macOS ISS#2323203)
 |}>;
 
 type RCTPickerIOSType = Class<

@@ -358,6 +358,10 @@ module.exports = {
   get processColor() {
     return require('processColor');
   },
+  get PlatformColor() {
+    // TODO(macOS ISS#2323203)
+    return require('../Color/ColorValueType');
+  },
   get requireNativeComponent() {
     return require('requireNativeComponent');
   },

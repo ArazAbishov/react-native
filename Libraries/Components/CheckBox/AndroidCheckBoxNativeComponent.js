@@ -14,7 +14,7 @@ const requireNativeComponent = require('../../ReactNative/requireNativeComponent
 import type {ViewProps} from '../View/ViewPropTypes';
 import type {SyntheticEvent} from '../../Types/CoreEventTypes';
 import type {NativeComponent} from '../../Renderer/shims/ReactNative';
-import type {NativeOrDynamicColorType} from '../../Color/NativeOrDynamicColorType'; // ]TODO(macOS ISS#2323203)
+import type {ColorValue} from '../../Color/ColorValueType'; // ]TODO(macOS ISS#2323203)
 
 type CheckBoxEvent = SyntheticEvent<
   $ReadOnly<{|
@@ -45,8 +45,8 @@ type NativeProps = $ReadOnly<{|
   enabled?: boolean,
   tintColors:
     | {|
-        true: ?(number | NativeOrDynamicColorType),
-        false: ?(number | NativeOrDynamicColorType),
+        true: ?ColorValue,
+        false: ?ColorValue,
       |}
     | typeof undefined,
 |}>;

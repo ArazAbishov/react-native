@@ -18,15 +18,14 @@ const requireNativeComponent = require('../../ReactNative/requireNativeComponent
 import type {SwitchChangeEvent} from '../../Types/CoreEventTypes';
 import type {ColorValue} from '../../StyleSheet/StyleSheetTypes';
 import type {ViewProps} from '../View/ViewPropTypes';
-import type {NativeOrDynamicColorType} from '../../Color/NativeOrDynamicColorType'; // TODO(macOS ISS#2323203)
 
 type SwitchProps = $ReadOnly<{|
   ...ViewProps,
   disabled?: ?boolean,
   onChange?: ?(event: SwitchChangeEvent) => mixed,
-  thumbColor?: ?(string | NativeOrDynamicColorType), // TODO(macOS ISS#2323203)
-  trackColorForFalse?: ?(string | NativeOrDynamicColorType), // TODO(macOS ISS#2323203)
-  trackColorForTrue?: ?(string | NativeOrDynamicColorType), // TODO(macOS ISS#2323203)
+  thumbColor?: ?ColorValue, // TODO(macOS ISS#2323203)
+  trackColorForFalse?: ?ColorValue, // TODO(macOS ISS#2323203)
+  trackColorForTrue?: ?ColorValue, // TODO(macOS ISS#2323203)
   value?: ?boolean,
 |}>;
 
@@ -36,17 +35,17 @@ export type NativeAndroidProps = $ReadOnly<{|
 
   enabled?: ?boolean,
   on?: ?boolean,
-  thumbTintColor?: ?(string | NativeOrDynamicColorType), // TODO(macOS ISS#2323203)
-  trackTintColor?: ?(string | NativeOrDynamicColorType), // TODO(macOS ISS#2323203)
+  thumbTintColor?: ?ColorValue, // TODO(macOS ISS#2323203)
+  trackTintColor?: ?ColorValue, // TODO(macOS ISS#2323203)
 |}>;
 
 // @see RCTSwitchManager.m
 export type NativeIOSProps = $ReadOnly<{|
   ...SwitchProps,
 
-  onTintColor?: ?(string | NativeOrDynamicColorType), // TODO(macOS ISS#2323203)
-  thumbTintColor?: ?(string | NativeOrDynamicColorType), // TODO(macOS ISS#2323203)
-  tintColor?: ?(string | NativeOrDynamicColorType), // TODO(macOS ISS#2323203)
+  onTintColor?: ?ColorValue, // TODO(macOS ISS#2323203)
+  thumbTintColor?: ?ColorValue, // TODO(macOS ISS#2323203)
+  tintColor?: ?ColorValue, // TODO(macOS ISS#2323203)
 |}>;
 
 type SwitchNativeComponentType = Class<

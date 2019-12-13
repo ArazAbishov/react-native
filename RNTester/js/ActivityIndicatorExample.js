@@ -11,7 +11,7 @@
 'use strict';
 
 import React, {Component} from 'react';
-import {ActivityIndicator, StyleSheet, View} from 'react-native';
+import {ActivityIndicator, PlatformColor, StyleSheet, View} from 'react-native';
 import Platform from '../../Libraries/Utilities/Platform'; // TODO(OSS Candidate ISS#2710739)
 
 type State = {|animating: boolean|};
@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
     padding: 8,
     ...Platform.select({
       macos: {
-        backgroundColor: {semantic: 'windowBackgroundColor'},
+        backgroundColor: PlatformColor('windowBackgroundColor'),
       },
       default: {
         backgroundColor: undefined,
@@ -120,7 +120,7 @@ exports.examples = [
           />
           <ActivityIndicator
             color={
-              Platform.OS === 'macos' ? {semantic: 'textColor'} : '#aa00aa'
+              Platform.OS === 'macos' ? PlatformColor('textColor') : '#aa00aa'
             }
           />
           <ActivityIndicator color="#aa3300" />

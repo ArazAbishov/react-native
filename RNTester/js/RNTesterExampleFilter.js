@@ -12,7 +12,7 @@
 
 import Platform from '../../Libraries/Utilities/Platform'; // TODO(macOS ISS#2323203)
 const React = require('react');
-const {StyleSheet, TextInput, View} = require('react-native');
+const {PlatformColor, StyleSheet, TextInput, View} = require('react-native'); // TODO(macOS ISS#2323203)
 
 type Props = {
   filter: Function,
@@ -75,8 +75,8 @@ class RNTesterExampleFilter extends React.Component<Props, State> {
           placeholder="Search..."
           placeholderTextColor={
             Platform.select({
-              macos: {semantic: 'placeholderTextColor'},
-              ios: {semantic: 'placeholderTextColor'},
+              macos: PlatformColor('placeholderTextColor'),
+              ios: PlatformColor('placeholderTextColor'),
               default: undefined,
             }) /*TODO(macOS ISS#2323203)*/
           }
@@ -95,10 +95,10 @@ const styles = StyleSheet.create({
     // [TODO(macOS ISS#2323203)
     ...Platform.select({
       macos: {
-        backgroundColor: {semantic: 'windowBackgroundColor'},
+        backgroundColor: PlatformColor('windowBackgroundColor'),
       },
       ios: {
-        backgroundColor: {semantic: 'systemGroupedBackgroundColor'},
+        backgroundColor: PlatformColor('systemGroupedBackgroundColor'),
       },
       default: {
         // ]TODO(macOS ISS#2323203)
@@ -111,14 +111,14 @@ const styles = StyleSheet.create({
     // [TODO(macOS ISS#2323203)
     ...Platform.select({
       macos: {
-        color: {semantic: 'textColor'},
-        backgroundColor: {semantic: 'textBackgroundColor'},
-        borderColor: {semantic: 'quaternaryLabelColor'},
+        color: PlatformColor('textColor'),
+        backgroundColor: PlatformColor('textBackgroundColor'),
+        borderColor: PlatformColor('quaternaryLabelColor'),
       },
       ios: {
-        color: {semantic: 'labelColor'},
-        backgroundColor: {semantic: 'secondarySystemGroupedBackgroundColor'},
-        borderColor: {semantic: 'quaternaryLabelColor'},
+        color: PlatformColor('labelColor'),
+        backgroundColor: PlatformColor('secondarySystemGroupedBackgroundColor'),
+        borderColor: PlatformColor('quaternaryLabelColor'),
       },
       default: {
         // ]TODO(macOS ISS#2323203)

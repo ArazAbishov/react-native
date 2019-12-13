@@ -13,7 +13,7 @@
 const React = require('react');
 const ReactNative = require('react-native');
 import Platform from '../../Libraries/Utilities/Platform';
-const {Text, View} = ReactNative;
+const {PlatformColor, Text, View} = ReactNative;
 
 type State = {};
 
@@ -142,7 +142,7 @@ class SemanticColorsExample extends React.Component<{}, State> {
             style={{
               flex: 1,
               alignItems: 'stretch',
-              color: {semantic: 'labelColor'},
+              color: PlatformColor('labelColor'),
             }}>
             {color}
           </Text>
@@ -150,7 +150,7 @@ class SemanticColorsExample extends React.Component<{}, State> {
             style={{
               flex: 0.25,
               alignItems: 'stretch',
-              backgroundColor: {semantic: `${color}`},
+              backgroundColor: PlatformColor(`${color}`),
             }}
           />
         </View>,
