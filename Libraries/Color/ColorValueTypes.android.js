@@ -12,7 +12,7 @@
 
 'use strict';
 
-export type ColorValue = null | string;
+export type ColorValue = null | string | NativeColorValue;
 
 export type NativeColorValue = Object; // flowlint-line unclear-type: off
 
