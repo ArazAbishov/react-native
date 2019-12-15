@@ -12,7 +12,7 @@
 
 'use strict';
 
-export type ColorValue = null | string | NativeColorValue;
+import type {ColorValue, ProcessedColorValue} from 'ColorValueTypes';
 
 export type NativeColorValue = {
   semantic?: string,
@@ -21,8 +21,6 @@ export type NativeColorValue = {
     dark: ?(ColorValue | ProcessedColorValue),
   },
 };
-
-export type ProcessedColorValue = number | NativeColorValue;
 
 export const PlatformColor = (
   name: string,
