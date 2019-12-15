@@ -14,7 +14,7 @@ const RCTActionSheetManager = require('../BatchedBridge/NativeModules')
 
 const invariant = require('invariant');
 const processColor = require('../StyleSheet/processColor');
-import type {ColorValue} from 'ColorValueTypes'; // TODO(macOS ISS#2323203)
+import type {ColorValue} from '../StyleSheet/StyleSheetTypes'; // TODO(macOS ISS#2323203)
 
 /**
  * Display action sheets and share sheets on iOS.

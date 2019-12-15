@@ -21,7 +21,7 @@ const resolveAssetSource = require('../Image/resolveAssetSource');
 const sizesDiffer = require('../Utilities/differ/sizesDiffer');
 const invariant = require('invariant');
 const warning = require('fbjs/lib/warning');
-import type {ProcessedColorValue} from 'ColorValueTypes'; // TODO(macOS ISS#2323203)
+import type {ProcessedColorValue} from '../StyleSheet/StyleSheetTypes'; // TODO(macOS ISS#2323203)
 
 function getNativeComponentAttributes(uiViewClassName: string) {
   const viewConfig = UIManager.getViewManagerConfig(uiViewClassName);

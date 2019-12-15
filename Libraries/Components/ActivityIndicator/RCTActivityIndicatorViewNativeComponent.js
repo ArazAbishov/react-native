@@ -15,7 +15,7 @@ const requireNativeComponent = require('../../ReactNative/requireNativeComponent
 import type {ViewProps} from '../View/ViewPropTypes';
 import type {ViewStyleProp} from '../../StyleSheet/StyleSheet';
 import type {NativeComponent} from '../../Renderer/shims/ReactNative';
-import type {ColorValue} from '../../Color/ColorValueTypes'; // ]TODO(macOS ISS#2323203)
+import type {ColorValue} from '../../StyleSheet/StyleSheetTypes'; // ]TODO(macOS ISS#2323203)
 
 type NativeProps = $ReadOnly<{|
   ...ViewProps,

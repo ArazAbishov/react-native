@@ -24,7 +24,7 @@ const ensurePositiveDelayProps = require('./ensurePositiveDelayProps');
 const processColor = require('../../StyleSheet/processColor');
 
 import type {PressEvent} from '../../Types/CoreEventTypes';
-import type {ColorValue} from '../../Color/ColorValueTypes'; // ]TODO(macOS ISS#2323203)
+import type {ColorValue} from '../../StyleSheet/StyleSheetTypes'; // TODO(macOS ISS#2323203)
 
 const rippleBackgroundPropType = PropTypes.shape({
   type: PropTypes.oneOf(['RippleAndroid']),

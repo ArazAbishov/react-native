@@ -16,7 +16,7 @@ import type {NativeComponent} from '../../Renderer/shims/ReactNative';
 import type {SyntheticEvent} from '../../Types/CoreEventTypes';
 import type {ViewStyleProp} from '../../StyleSheet/StyleSheet';
 import type {Element, Node} from 'react';
-import type {ColorValue} from '../../Color/ColorValueTypes'; // ]TODO(macOS ISS#2323203)
+import type {ColorValue} from '../../StyleSheet/StyleSheetTypes'; // ]TODO(macOS ISS#2323203)
 
 type DrawerStates = 'Idle' | 'Dragging' | 'Settling';
 

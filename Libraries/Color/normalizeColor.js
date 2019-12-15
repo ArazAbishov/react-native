@@ -11,7 +11,7 @@
 /* eslint no-bitwise: 0 */
 'use strict';
 
-import type {ColorValue, ProcessedColorValue} from './ColorValueTypes'; // TODO(macOS ISS#2323203)
+import type {ColorValue, ProcessedColorValue} from 'ColorValueTypes'; // TODO(macOS ISS#2323203)
 
 function normalizeColor(
   color: ?(ColorValue | ProcessedColorValue) /* TODO(macOS ISS#2323203) */,

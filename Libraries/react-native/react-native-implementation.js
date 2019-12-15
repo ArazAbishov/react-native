@@ -336,7 +336,7 @@ module.exports = {
   },
   get PlatformColor() {
     // TODO(macOS ISS#2323203)
-    return require('../Color/ColorValueTypes').PlatformColor;
+    return require('../StyleSheet/StyleSheetTypes').PlatformColor;
   },
   get requireNativeComponent() {
     return require('requireNativeComponent');

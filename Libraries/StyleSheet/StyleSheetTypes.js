@@ -11,9 +11,11 @@
 'use strict';
 
 const AnimatedNode = require('../Animated/src/nodes/AnimatedNode');
-import type {ColorValue} from '../Color/ColorValueTypes'; // TODO(macOS ISS#2323203)
+import type {ColorValue, ProcessedColorValue} from 'ColorValueTypes'; // TODO(macOS ISS#2323203)
+import {PlatformColor} from 'ColorValueTypes'; // TODO(macOS ISS#2323203)
 
-export type {ColorValue}; // TODO(macOS ISS#2323203)
+export type {ColorValue, ProcessedColorValue}; // TODO(macOS ISS#2323203)
+export {PlatformColor}; // TODO(macOS ISS#2323203)
 export type DimensionValue = null | number | string | AnimatedNode;
 
 /**

@@ -21,8 +21,10 @@ const processColor = require('../../StyleSheet/processColor');
 const RCTPickerNativeComponent = require('./RCTPickerNativeComponent');
 
 import type {SyntheticEvent} from '../../Types/CoreEventTypes';
-import type {ColorValue} from '../../StyleSheet/StyleSheetTypes';
-import type {ProcessedColorValue} from '../../Color/ColorValueTypes'; // TODO(macOS ISS#2323203)
+import type {
+  ColorValue,
+  ProcessedColorValue,
+} from '../../StyleSheet/StyleSheetTypes'; // TODO(macOS ISS#2323203)
 import type {ViewProps} from '../View/ViewPropTypes';
 import type {TextStyleProp} from '../../StyleSheet/StyleSheet';
 

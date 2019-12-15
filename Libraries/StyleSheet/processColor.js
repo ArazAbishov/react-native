@@ -13,7 +13,7 @@
 const Platform = require('../Utilities/Platform');
 
 const normalizeColor = require('../Color/normalizeColor');
-import type {ColorValue, ProcessedColorValue} from '../Color/ColorValueTypes'; // ]TODO(macOS ISS#2323203)
+import type {ColorValue, ProcessedColorValue} from 'ColorValueTypes'; // ]TODO(macOS ISS#2323203)
 
 /* eslint no-bitwise: 0 */
 function processColor(
