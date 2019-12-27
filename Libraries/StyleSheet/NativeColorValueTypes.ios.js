@@ -5,29 +5,78 @@
  * LICENSE file in the root directory of this source tree.
  *
  * @format
- * @flow strict
+ * @flow strict-local
  */
 
 // TODO(macOS ISS#2323203)
 
 'use strict';
 
-import type {ColorValue, ProcessedColorValue} from 'ColorValueTypes';
+import type {ColorValue, ProcessedColorValue} from './ColorValueTypes';
 
-export type NativeColorValue = {
-  semantic?: string,
+export opaque type NativeColorValue = {
+  semantic?: Array<string>,
   dynamic?: {
     light: ?(ColorValue | ProcessedColorValue),
     dark: ?(ColorValue | ProcessedColorValue),
   },
 };
 
-export const PlatformColor = (
-  name: string,
-  options?: Object /* flowlint-line unclear-type: off */,
+export const PlatformColor = (...names: Array<string>): ColorValue => {
+  return {semantic: names};
+};
+
+export type IOSDynamicColorTuple = {
+  light: ColorValue,
+  dark: ColorValue,
+};
+
+export const IOSDynamicColor = (tuple: IOSDynamicColorTuple): ColorValue => {
+  return {dynamic: {light: tuple.light, dark: tuple.dark}};
+};
+
+export const AndroidHypotheticalColor = (
+  object: Object, // flowlint-line unclear-type: off
 ): ColorValue => {
-  if (options) {
-    return options;
+  return null;
+};
+
+export const normalizeColorObject = (
+  color: NativeColorValue,
+): ?ProcessedColorValue => {
+  if ('semantic' in color) {
+    // an ios semantic color
+    return color;
+  } else if ('dynamic' in color && color.dynamic !== undefined) {
+    const normalizeColor = require('../Color/normalizeColor');
+
+    // a dynamic, appearance aware color
+    const dynamic = color.dynamic;
+    const dynamicColor: NativeColorValue = {
+      dynamic: {
+        light: normalizeColor(dynamic.light),
+        dark: normalizeColor(dynamic.dark),
+      },
+    };
+    return dynamicColor;
   }
-  return {semantic: name};
+
+  return null;
+};
+
+export const processColorObject = (
+  color: NativeColorValue,
+): ?NativeColorValue => {
+  if ('dynamic' in color && color.dynamic !== undefined) {
+    const processColor = require('./processColor');
+    const dynamic = color.dynamic;
+    const dynamicColor: NativeColorValue = {
+      dynamic: {
+        light: processColor(dynamic.light),
+        dark: processColor(dynamic.dark),
+      },
+    };
+    return dynamicColor;
+  }
+  return color;
 };

@@ -12,8 +12,8 @@
 
 const Platform = require('../Utilities/Platform');
 
-const normalizeColor = require('../Color/normalizeColor');
-import type {ColorValue, ProcessedColorValue} from 'ColorValueTypes'; // ]TODO(macOS ISS#2323203)
+const normalizeColor = require('../Color/normalizeColor'); // [TODO(macOS ISS#2323203)
+import type {ColorValue, ProcessedColorValue} from 'ColorValueTypes';
 
 /* eslint no-bitwise: 0 */
 function processColor(
@@ -29,7 +29,7 @@ function processColor(
   }
 
   if (typeof int32Color === 'object') {
-    const processColorObject = require('processColorObject'); // TODO(macOS ISS#2323203)
+    const processColorObject = require('../StyleSheet/NativeColorValueTypes').processColorObject; // TODO(macOS ISS#2323203)
 
     const processedColorObj = processColorObject(int32Color);
 

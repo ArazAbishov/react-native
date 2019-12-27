@@ -1,7 +1,7 @@
 [ignore]
 ; We fork some components by platform
 .*/*[.]android.js
-.*/*[.]macos.js
+.*/*[.]ios.js
 
 ; Ignore templates for 'react-native init'
 <PROJECT_ROOT>/template/.*
@@ -50,7 +50,7 @@ esproposal.nullish_coalescing=enable
 
 module.file_ext=.js
 module.file_ext=.json
-module.file_ext=.ios.js
+module.file_ext=.macos.js
 
 module.system=haste
 module.system.haste.use_name_reducers=true
@@ -60,8 +60,8 @@ module.system.haste.name_reducers='^.*/\([a-zA-Z0-9$_.-]+\.js\(\.flow\)?\)$' -> 
 # strip .js or .js.flow suffix
 module.system.haste.name_reducers='^\(.*\)\.js\(\.flow\)?$' -> '\1'
 # strip .ios suffix
-module.system.haste.name_reducers='^\(.*\)\.ios$' -> '\1'
 module.system.haste.name_reducers='^\(.*\)\.macos$' -> '\1'
+module.system.haste.name_reducers='^\(.*\)\.ios$' -> '\1'
 module.system.haste.name_reducers='^\(.*\)\.android$' -> '\1'
 module.system.haste.name_reducers='^\(.*\)\.native$' -> '\1'
 module.system.haste.paths.blacklist=.*/__tests__/.*

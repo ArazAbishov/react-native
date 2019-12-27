@@ -5,18 +5,47 @@
  * LICENSE file in the root directory of this source tree.
  *
  * @format
- * @flow strict
+ * @flow strict-local
  */
 
 // TODO(macOS ISS#2323203)
 
 'use strict';
 
-import type ColorValue from 'ColorValueTypes';
+import type {ColorValue, ProcessedColorValue} from './ColorValueTypes';
 
-export type NativeColorValue = Object; // flowlint-line unclear-type: off
+export opaque type NativeColorValue = {
+  hypothetical_android_color?: Array<string>,
+};
 
-export const PlatformColor = (
-  name: string,
-  options?: Object /* flowlint-line unclear-type: off */,
-): ColorValue => null;
+export const PlatformColor = (...names: Array<string>): ColorValue => {
+  return {hypothetical_android_color: names};
+};
+
+export const IOSDynamicColor = (
+  object: Object, // flowlint-line unclear-type: off
+): ColorValue => {
+  return null;
+};
+
+export type AndroidColorTuple = {
+  hypothetical_android_color: string,
+};
+
+export const AndroidHypotheticalColor = (
+  tuple: AndroidColorTuple,
+): ColorValue => {
+  return {hypothetical_android_color: [tuple.hypothetical_android_color]};
+};
+
+export const normalizeColorObject = (
+  color: NativeColorValue,
+): ?ProcessedColorValue => {
+  return null;
+};
+
+export const processColorObject = (
+  color: NativeColorValue,
+): ?NativeColorValue => {
+  return null;
+};

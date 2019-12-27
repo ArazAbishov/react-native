@@ -178,7 +178,7 @@ class DrawerLayoutAndroid extends React.Component<Props, State> {
   render() {
     const {onDrawerStateChanged, ...props} = this.props;
     const drawStatusBar =
-      Platform.Version >= 21 && this.props.statusBarBackgroundColor;
+      Platform.Version >= 21 && this.props.statusBarBackgroundColor !== null; // TODO(macOS ISS#2323203)
     const drawerViewWrapper = (
       <View
         style={[

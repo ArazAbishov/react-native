@@ -11,8 +11,9 @@
 'use strict';
 
 import React, {Component} from 'react';
-import {ActivityIndicator, PlatformColor, StyleSheet, View} from 'react-native';
+import {ActivityIndicator, PlatformColor, StyleSheet, View} from 'react-native'; // TODO(OSS Candidate ISS#2710739)
 import Platform from '../../Libraries/Utilities/Platform'; // TODO(OSS Candidate ISS#2710739)
+import {IOSDynamicColor} from '../../Libraries/StyleSheet/NativeColorValueTypes'; // TODO(OSS Candidate ISS#2710739)
 
 type State = {|animating: boolean|};
 type Props = $ReadOnly<{||}>;
@@ -114,7 +115,7 @@ exports.examples = [
           <ActivityIndicator
             color={
               Platform.OS === 'macos'
-                ? PlatformColor('', {dynamic: {light: 'black', dark: 'white'}})
+                ? IOSDynamicColor({light: 'black', dark: 'white'})
                 : '#0000ff'
             }
           />
